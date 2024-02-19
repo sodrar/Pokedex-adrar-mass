@@ -2,4 +2,5 @@ body {
   background-color: #ef3e3e;
   color: white;
   font-family: sans-serif;
+  max-width: 1440px;
 }

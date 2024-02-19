@@ -1,0 +1,15 @@
+.pokemon {
+    margin-bottom: 26px;
+}
+
+.pokemon-list {
+    margin-left: 54px;
+    margin-top: 23px;
+    height: 800px;
+    overflow: scroll;
+    width: 400px;
+}
+
+.pokemon-list::-webkit-scrollbar {
+    display: none;
+  }

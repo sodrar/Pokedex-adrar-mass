@@ -1,11 +1,12 @@
 import './App.css'
 import { Pokemon } from './components/Pokemon/Pokemon'
+import { PokemonList } from './components/PokemonList/PokemonList'
 
 function App({pokemons}) {
 
   return (
     <div>
-      <Pokemon pokemon={pokemons[1]} />
+      <PokemonList pokemons={pokemons} />
     </div>
   )
 }
