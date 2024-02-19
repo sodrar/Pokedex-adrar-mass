@@ -3,6 +3,7 @@
     background-color: #292929;
     width: 400px;
     height: 60px;
+    gap: 10px;
 }
 
 .pokemon-id {
@@ -14,6 +15,7 @@
     flex-basis: 75%;
 }
 
-.pokemon-img {
+.pokemon-image {
     flex-basis: 15%;
+    object-fit: contain;
 }

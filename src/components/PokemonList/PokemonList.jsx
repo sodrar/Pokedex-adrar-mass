@@ -1,7 +1,7 @@
 import { Pokemon } from '../Pokemon/Pokemon'
 import './PokemonList.css'
 
-export function PokemonList({pokemons}) {
+export function PokemonList({pokemons, evolution}) {
     
     const pokemonsElements = []
     pokemons.map((pokemon,i) => pokemonsElements.push(<Pokemon className="pokemon" key={i} pokemon={pokemon} />))
