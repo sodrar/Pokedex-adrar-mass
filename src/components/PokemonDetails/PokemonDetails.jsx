@@ -2,7 +2,6 @@ import { Pokemon } from '../Pokemon/Pokemon'
 import './PokemonDetails.css'
 
 export function PokemonDetails({ pokemon, evolution }) {
-    console.log(evolution)
     return (
         <div className="details-container">
             <h3>n°{pokemon.id}</h3>
