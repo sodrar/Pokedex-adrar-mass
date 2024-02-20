@@ -6,6 +6,10 @@ import { PokemonDetails } from './components/PokemonDetails/PokemonDetails'
 function App({pokemons}) {
 
   const [current,setCurrent] = useState(pokemons[0])
+  const [searched, setSearched] = useState("")
+  const handleSearch = e => {
+    setSearched(e.target.value)
+  }
 
   let evoImg = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fen%2Fsearch%3Fq%3Dnone&psig=AOvVaw07UdkZ894V4LAWT7lWH6cU&ust=1708460797246000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDbu8ieuIQDFQAAAAAdAAAAABAI"
   let evolution = {
@@ -28,10 +32,21 @@ function App({pokemons}) {
     setCurrent(pokemons[id])
   }
 
+  let filtered = []
+
+  if (searched != "") {
+    filtered = pokemons.filter(pokemon => pokemon.name.includes(searched))
+  } else {
+    filtered = pokemons
+  }
+
   return (
     <div className='app-container'>
-      <PokemonList className="poke-list" pokemons={pokemons} evolution={evolution} setCurrentId={handleSetCurrentId} />
+      <PokemonList className="poke-list" pokemons={filtered} evolution={evolution} setCurrentId={handleSetCurrentId} />
       <PokemonDetails className="poke-details" pokemon={current} evolution={evolution} />
+      <div>
+        <input type="text" className='poke-search' onChange={handleSearch}/>
+      </div>
     </div>
   )
 }
