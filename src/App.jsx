@@ -35,7 +35,7 @@ function App({pokemons}) {
   let filtered = []
 
   if (searched != "") {
-    filtered = pokemons.filter(pokemon => pokemon.name.includes(searched))
+    filtered = pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(searched.toLowerCase()))
   } else {
     filtered = pokemons
   }
